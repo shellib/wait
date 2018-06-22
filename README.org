@@ -1,0 +1,21 @@
+* Wait utility for unix shell.
+
+** Features
+*** wait_for   
+**** fixed delay
+**** exponential backoff
+
+    
+* wait_for
+
+  This function allows you to wait until a condition is satisfied. The condition can be specified using a boolean function that returns "true" or "false".
+  It provides the following options:
+
+  | Option               | Required | Description                                                                              |
+  |----------------------+----------+------------------------------------------------------------------------------------------|
+  | --function           | true     | The function that evaluates if we should wait for more (defaults: to always return true) |
+  | --max-wait-time      | false    | The maximum amount of time in seconds to wait                                            |
+  | --retry-delay        | false    | The delay between retries (if exponential back off is not used)                          |
+  | --backoff-multiplier | false    | The backoff multiplier to use                                                            |
+
+
